@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600&display=swap');
+
+:root {
+    --green: #28a745; /* Your green */
+    --gold: #ffc107; /* Your gold */
+    --dark-gray: #222;
+    --light-gray: #f4f4f4;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Global Styles */
+body {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, var(--green), var(--gold));
+    color: var(--white);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+header .logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+    /*background: none;*/ 
+    /*display: block;*/
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px var(--shadow);
+}
+
+header p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--gold);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    color: var(--green);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.about, .features {
+    background-color: var(--white);
+    box-shadow: 0 4px 12px var(--shadow);
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 900px;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    padding: 10px;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.features li:last-child {
+    border-bottom: none;
+}
+
+/* QR Code Section */
+.qr-code img {
+    max-width: 200px;
+    margin: 20px auto;
+    display: block;
+    border: 4px solid var(--gold);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px var(--shadow);
+}
+
+.qr-code p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 10px;
+    background: var(--dark-gray);
+    color: var(--white);
+    font-size: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--green);
+    text-decoration: underline;
+}
+
+/* Add Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
